@@ -1,0 +1,488 @@
+:root {
+    font-family: 'PT Sans', sans-serif;
+    --primary-color: #f1f1f1;
+    --secundary-color: #C7B7A3;
+    --black-color: #000000;
+}
+
+/** Globales **/
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem = 10px */ 
+}
+
+body {
+    transition: all 0.3s;
+    margin: 0;
+}
+
+main {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2, h3, h4 {
+    font-family: var(--secundary-color);
+    line-height: 1.2;
+}
+h1 {
+    font-size: 4.8rem;
+}
+h2 {
+    font-size: 4rem;
+}
+h3 {
+    font-size: 3.2rem;
+}
+h4 {
+    font-size: 2.8rem;
+}
+
+h5 {
+    font-size: 2.2rem;
+}
+
+h6 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.8rem;
+}
+
+img {
+    border-style: none;
+
+    max-width: 100%;
+}
+a {
+    background-color: transparent;
+}
+li {
+    list-style: none;
+}
+
+.contenedor {
+    width: min(90%, 120rem);
+    margin: 0 auto;
+}
+
+
+/** Utilidades **/
+.no-margin {
+    margin: 0;
+}
+.no-padding {
+    padding: 0;
+}
+.centrar-texto {
+    text-align: center;
+}
+
+
+/** STYLES **/
+
+body {
+    background-color: var(--primary-color);
+    margin: 0;
+    height: 100vh;
+}
+
+nav ul{
+    list-style: none;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+a {
+    color: var(--primary-color);
+}
+
+
+
+/** CONTORNOS **/
+
+.barra nav ul li a {
+    -webkit-text-stroke: 0.1px black;
+}
+
+.header__texto h1 {
+    -webkit-text-stroke: 0.2px black;
+}
+.header__texto p{
+    -webkit-text-stroke: 0.05px black;
+}
+
+
+/** Header **/
+
+.header-index {
+    height: 60rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    background-image: url(../assets/img/banner.jpg);
+}
+
+.header__back {
+    background-image: url(../assets/img/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header h1 {
+    width: 100%;
+}
+
+.barra {
+    justify-content: space-between;
+    width: min(90%, 120rem);
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.barra img {
+    display: none;
+}
+
+.header__texto {
+    text-align: center;
+    color: var(--primary-color);
+    margin: 2rem;
+}
+
+@media (min-width: 768px) {
+    .header__texto {
+        text-align: center;
+        color: var(--primary-color);
+        margin-top: 10rem;
+    }
+}
+
+.header {
+    margin-bottom: 5rem;
+}
+
+.logo {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .logo {
+        display: inline;
+        padding: 1em;
+    }
+}
+
+.img-logo {
+    width: 15rem;
+}
+
+
+/** MENU **/
+
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+    }
+    .barra img {
+        display: flex;
+    }
+}
+
+.barra nav ul{
+    display: block;
+    text-align: center;
+    position: relative;
+}
+
+.barra nav ul a {
+    position: relative;
+    display: inline-block;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-right: 2em;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+
+@media (min-width: 768px) {
+    .barra nav {
+        display: flex;
+        align-items: center;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .barra nav ul {
+        display: flex;
+    }
+
+    .barra nav ul li {
+        margin-right: 2em;
+    }
+
+    .barra nav ul li:last-of-type {
+        margin-right: 0;
+    }
+
+    .barra nav ul a {
+        font-weight: bold;
+    }
+
+    .barra nav ul a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -1rem;
+        width: 0;
+        height: 0.5rem; 
+        background-color: var(--primary-color);
+        transition: width 0.3s ease;
+    }
+    
+    .barra nav ul a:hover::after {
+        width: 100%;
+    }
+    
+    .barra nav ul a.active::after {
+        width: 100%;
+    }
+}
+
+
+/** MAIN **/
+
+main h2 {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.imagenes img {
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+    height: 300px;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, background-size 0.3s ease;
+}
+
+.informacion img {
+    display: none;
+}
+
+@media (min-width: 1140px) {
+    .informacion img {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    .informacion{
+        display: flex
+    }
+    .informacion img {
+        width: 25rem;
+        height: 25rem;
+    }
+
+    .informacion p {
+        margin-left: 2rem;
+        text-align: justify;
+    }
+}
+
+.img__proyectos {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .img__proyectos {
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    }
+
+    .img__proyectos img {
+        height: auto;
+        }
+}
+
+.carousel {
+    width: 90%;
+}
+
+@media (min-width: 768px) {
+    .carousel{
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .imagenes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
+.imagenes img:hover {
+    background-size: 110%;
+    transform: scale(1.1);
+}
+
+
+/** TECNICAS PAGE **/
+
+.img__tecnicas .img-info h6{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.img__tecnicas p {
+    text-align: justify;
+}
+
+/** MATERIALES PAGE **/
+
+.info-materiales {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-materiales img {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.info-materiales p:first-of-type {
+    margin-top: 4rem;
+    margin-bottom: 0;
+    text-align: justify;
+}
+
+.info-materiales p:last-of-type {
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+}
+
+
+.lista-materiales li, .info-materiales__caja div li {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-top:1rem ;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .lista-materiales li, .lista-materiales div li {
+        text-align: left;
+    }
+}
+
+.lista-materiales p, .lista-materiales div p {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/** DISEÑOS PAGE **/
+
+@media (min-width: 768px) {
+    .disenos {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 5rem;
+    }
+
+    .img-info img:hover {
+        background-size: 110%;
+        transform: scale(1.05);
+        transition: transform 0.3s ease, background-size 0.3s ease;
+    }
+}
+
+.h2-disenos {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.img__disenos {
+    text-align: center;
+}
+
+.img__disenos .img-info p {
+    text-align: justify;
+}
+
+.img-info h6 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+
+/** FOOTER **/
+footer {
+    color: var(--primary-color);
+    background-color: var(--secundary-color);
+    margin-top: 20px;
+}
+
+footer .logo {
+    width: 8rem;
+}
+
+footer .barra nav ul li a {
+    font-size: 1.5rem;
+}
+
+/** Contacto **/
+
+.contacto {
+    padding-top: 5rem;
+}
+
+.contacto h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.redes a {
+    display: inline-block;
+    width: 50%;
+    padding: 1.5rem 3rem;
+    background-color: var(--secundary-color);
+    color: var(--primary-color);
+    text-align: center;
+    border-radius: 2.5rem;
+    text-decoration: none;
+    font-size: 1.8rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.redes a:hover {
+    background-color: #A89A8B;
+    transform: scale(1.05);
+} 
+
+.footer-contacto {
+    position: sticky;
+    top: 100vh;
+}
+
