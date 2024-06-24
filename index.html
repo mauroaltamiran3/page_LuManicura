@@ -20,11 +20,11 @@
 </head>
 <body>
     <header id="header" class="header header-index">
-        <div class="contenedor barra">
+        <div class="container py-4 barra">
             <a href="index.html" class="logo">
                 <img class="img-logo" src="./assets/img/logo.png" alt="Logo">
             </a>   
-            <nav>  
+            <nav class="navbar-extended">  
                 <ul>               
                     <li>
                         <a href="#" class="active">Proyectos</a>
@@ -42,6 +42,35 @@
                         <a href="./pages/contacto.html">Contacto</a>
                     </li>
                 </ul>
+            </nav>
+            <nav class="navbar-collapsed">
+
+                <div class="dropdown">
+                    <button class="btn btn-outline-light" data-bs-toggle="dropdown">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                        </svg>
+                    </button>
+        
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="#" class="active">Proyectos</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="./pages/tecnicas.html">Técnicas</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="./pages/disenos.html">Diseños</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="./pages/materiales.html">Materiales</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="./pages/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+    
             </nav>
         </div>
 
@@ -65,7 +94,6 @@
                     <p>Estoy comprometida con la satisfacción de mis clientas, garantizando una experiencia relajante y resultados impecables en cada visita. Estoy aquí para ayudarte a lucir y sentirte lo mejor posible.
                     </p>
                 </div>
-
             </div>
             <h2 class="proyectos">Nuestros Proyectos</h2>
             <section class="imagenes img__proyectos">
@@ -119,14 +147,14 @@
     </div>
 
     <footer>
-        <div class="barra">
+        <div class="barra-footer">
             <a href="#header" class="logo">
                 <img class="img-logo" src="./assets/img/logo.png" alt="Logo">
             </a>   
-            <nav>  
+            <nav class="navbar-footer">  
                 <ul>               
                     <li>
-                        <a href="#">Proyectos</a>
+                        <a href="#" class="active">Proyectos</a>
                     </li>
                     <li>
                         <a href="./pages/tecnicas.html">Técnicas</a>
@@ -145,6 +173,7 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 </body>
 </html>

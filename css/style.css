@@ -52,6 +52,7 @@ h6 {
 
 p {
     font-size: 1.8rem;
+    margin: 0;
 }
 
 img {
@@ -64,6 +65,10 @@ a {
 }
 li {
     list-style: none;
+}
+ul {
+    padding: 0;
+    margin: 0;
 }
 
 .contenedor {
@@ -189,40 +194,56 @@ a {
 
 /** MENU **/
 
+
+
 @media (min-width: 768px) {
     .barra {
         display: flex;
     }
+
     .barra img {
         display: flex;
     }
+
+    .barra nav ul{
+        display: block;
+        text-align: center;
+        position: relative;
+    }
+    
+    .barra nav ul a {
+        position: relative;
+        display: inline-block;
+        font-size: 2.2rem;
+        font-weight: bold;
+        margin-right: 2em;
+        color: var(--primary-color);
+        text-decoration: none;
+    }
 }
 
-.barra nav ul{
-    display: block;
-    text-align: center;
-    position: relative;
+.navbar-extended {
+    display: none;
 }
 
-.barra nav ul a {
-    position: relative;
-    display: inline-block;
-    font-size: 2.2rem;
-    font-weight: bold;
-    margin-right: 2em;
-    color: var(--primary-color);
-    text-decoration: none;
+.barra nav ul {
+    display: none;
 }
+
 
 
 @media (min-width: 768px) {
-    .barra nav {
+    .navbar-extended, footer .barra nav {
         display: flex;
         align-items: center;
         margin-top: 0;
         margin-bottom: 0;
     }
 
+    .navbar-collapsed {
+        display: none;
+    }
+    
     .barra nav ul {
         display: flex;
     }
@@ -257,6 +278,24 @@ a {
     .barra nav ul a.active::after {
         width: 100%;
     }
+}
+
+.show {
+    margin-bottom: 18rem ;
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    
+}
+
+.dropdown-menu {
+    width: 100%;
+}
+
+.dropdown-item {
+    font-size: 2rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    text-align: center;
 }
 
 
@@ -430,6 +469,68 @@ main h2 {
 
 
 /** FOOTER **/
+
+@media (min-width: 768px) {
+    .barra-footer {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 7.6rem;
+    }
+
+    .barra-footer img {
+        display: flex;
+    }
+
+    .barra-footer nav ul{
+        display: block;
+        text-align: center;
+        position: relative;
+    }
+    
+    .barra-footer nav ul a {
+        position: relative;
+        display: inline-block;
+        font-size: 1.5rem;
+        margin-right: .5em;
+        color: var(--primary-color);
+        text-decoration: none;
+    }
+
+    .barra-footer nav ul {
+        display: flex;
+    }
+
+    .barra-footer nav ul li {
+        margin-right: 2em;
+    }
+
+    .barra-footer nav ul li:last-of-type {
+        margin-right: 0;
+    }
+
+    .barra-footer nav ul a {
+        font-weight: bold;
+    }
+
+    .navbar-footer {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.navbar-footer {
+    text-align: center;
+    padding: 1.5rem 0;
+
+}
+
+.navbar-footer ul li a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+
 footer {
     color: var(--primary-color);
     background-color: var(--secundary-color);
@@ -447,7 +548,7 @@ footer .barra nav ul li a {
 /** Contacto **/
 
 .contacto {
-    padding-top: 5rem;
+    padding-top: 10rem;
 }
 
 .contacto h2 {
@@ -463,8 +564,15 @@ footer .barra nav ul li a {
     flex-wrap: wrap;
 }
 
+.redes p {
+    margin-right: 2rem;
+    font-size: 2rem;
+}
+
 .redes a {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50%;
     padding: 1.5rem 3rem;
     background-color: var(--secundary-color);
@@ -476,6 +584,11 @@ footer .barra nav ul li a {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+.redes svg {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
 .redes a:hover {
     background-color: #A89A8B;
     transform: scale(1.05);
@@ -485,4 +598,3 @@ footer .barra nav ul li a {
     position: sticky;
     top: 100vh;
 }
-
