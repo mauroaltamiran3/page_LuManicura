@@ -1,7 +1,7 @@
 :root {
     font-family: 'PT Sans', sans-serif;
-    --primary-color: #f1f1f1;
-    --secundary-color: #C7B7A3;
+    --primary-color: #F2F2F2;
+    --secundary-color: #9B5E31;
     --black-color: #000000;
 }
 
@@ -13,8 +13,8 @@ html {
 }
 
 body {
-    transition: all 0.3s;
     margin: 0;
+    background-color: var(--primary-color);
 }
 
 main {
@@ -31,6 +31,7 @@ h2, h3, h4 {
 }
 h1 {
     font-size: 4.8rem;
+    width: min(90%, 120rem);
 }
 h2 {
     font-size: 4rem;
@@ -74,8 +75,8 @@ ul {
 .contenedor {
     width: min(90%, 120rem);
     margin: 0 auto;
+    background-color: var(--primary-color);
 }
-
 
 /** Utilidades **/
 .no-margin {
@@ -133,11 +134,11 @@ a {
     background-repeat: no-repeat;
     background-position: center center;
 
-    background-image: url(../assets/img/banner.jpg);
+    background-image: url(../assets/img/banner.webp);
 }
 
 .header__back {
-    background-image: url(../assets/img/banner.jpg);
+    background-image: url(../assets/img/banner.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
