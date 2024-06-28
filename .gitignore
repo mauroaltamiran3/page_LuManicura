@@ -5,3 +5,5 @@ img_cache
 test.html
 
 *.psd
+
+node_modules
