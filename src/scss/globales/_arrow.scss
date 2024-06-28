@@ -1,0 +1,16 @@
+.contenedor-arrow {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    a {
+        cursor: pointer;
+        color: $alternative;
+        background-color: $white;
+        border-radius: 3rem;
+        margin: 0 2rem 2rem 0;
+        position: fixed;
+        bottom: 0;
+    }
+}
+

@@ -1,0 +1,152 @@
+.barra {
+    display: flex;
+    flex-direction: row;
+    padding-top: 3rem;
+
+
+    @include tablet {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @include desktop {
+        flex-direction: row;
+    }
+
+    .navegacion {    /* invertir orden */
+        order: 1;
+        @include desktop{
+        order: 2;
+        }
+    }
+    
+    .logo {     /* invertir orden */
+        order: 2;
+        @include desktop{
+            order: 1;
+        }
+
+        .img-logo {
+            width: 12rem;
+        
+            @include tablet {
+                margin-bottom: 0;
+                width: 20rem;
+            }
+        
+            @include desktop {
+                width: 15rem;
+            }
+        }
+    }
+}
+
+.navegacion {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    top: -50rem;    
+    transition: all .5s;
+
+
+    @include tablet {
+        display: flex;
+        align-items: center;
+        flex-direction: initial;
+        opacity: 1;
+        visibility: visible;
+        height: auto;
+        margin-bottom: $separacion / 2;
+        justify-content:center;
+        top: 0;
+    }
+
+    @include desktop {
+        justify-content: flex-end;
+        margin-bottom: 0;
+    }
+
+    a {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        letter-spacing: 0.05rem;
+        font-size: 2rem;
+        font-weight: $bold;
+        color: $white;
+        -webkit-text-stroke: 0.1px $black;
+
+        @include tablet {
+            display: flex;
+            font-size: 2.25rem;
+            margin-right: $separacion / 2;
+
+            &::after{
+                content: '';
+                position: absolute;
+                background-color: $white;
+                width: 0;
+                height: 0.5rem;
+                left: 0;
+                bottom: -0.5rem;
+                transition: all 0.3s;
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+
+            &.active::after{
+                width: 100%;
+            }
+        }
+
+        @include desktop {
+            display: flex;
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.active {
+
+    position: relative;
+}
+
+.menu-mobile {
+    cursor: pointer;
+    height: 0;
+
+    .list_icon {
+        color: $white;
+    }
+
+    img {
+        width: 5rem;
+        background-color: $white;
+        border-radius: 1px 1rem;
+    }    
+    
+    @include tablet {
+        display: none;
+    }
+}
+
+.menu_hamburguesa {
+    display: none;
+
+}
+
+.menu_hamburguesa:checked + .navegacion a {
+    display: flex;
+}
+.menu_hamburguesa:checked + .navegacion {
+    top: 0;
+}
+

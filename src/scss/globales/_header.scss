@@ -1,0 +1,63 @@
+.header {
+    background-color: $negro;
+    padding: 1rem 0 3rem 0;
+    background-image: url(../src/img/banner.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+    &.inicio {
+        min-height: 60rem;
+
+        @include tablet {
+            min-height: 60rem;
+        }
+
+        .contenido-header {
+            @include tablet {
+                min-height: calc(60rem / 1.5);
+            }
+        }
+    }
+
+    /** PAGES HEADER **/
+    &.pages {
+        padding: $separacion / 4;
+
+        .barra {
+            padding: 0;
+        }
+
+        img {
+            width: 10rem;
+        }
+    }
+}
+
+.contenido-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    .texto-header h1 {
+        color: $white;
+        font-weight: $bold;
+        line-height: 2;
+        -webkit-text-stroke: 0.2px $negro;
+    }
+
+    .texto-header p {
+        color: $white;
+        text-align: center;
+        -webkit-text-stroke: 0.05px $negro;
+        
+    }
+}
+
+.barra {
+    justify-content: space-between;
+    width: min(90%, 120rem);
+    margin: 0 auto;
+    padding: 1rem 0;
+}

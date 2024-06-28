@@ -1,0 +1,46 @@
+.materiales {
+
+    p {
+        margin: 0 1rem;
+    }
+
+    .img-contenedor {
+        background-color: $negro;
+        padding: 1rem 0 20rem 0;
+        background-image: url(../src/img/banner-tenicas.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .lista-materiales {
+
+        &:last-of-type {
+        margin-bottom: $separacion;
+        }
+
+        .col-sm-4, .col-sm-6 {
+            margin: 1rem 0;
+            background-color: $gris;
+
+            @include tablet {
+                margin-bottom: 1rem;
+            }
+        }
+
+        h4 {
+            text-align: center;
+        }
+    }
+
+    .p-materiales {
+        height: 40rem;
+        overflow: auto;
+        margin: $separacion 0;
+
+        @include tablet {
+            height: auto;
+        }
+    }
+}
+

@@ -1,0 +1,39 @@
+.disenos {
+    margin-bottom: $separacion;
+
+    @include tablet {
+        display: flex;
+        gap: $separacion;
+    }
+
+
+
+
+    .disenos-article {
+
+        @include tablet {
+            width: 100%;
+            height: 100vh;
+        }
+
+
+        img {
+            @include phone {
+                margin: 0 auto;
+                width: 60%;
+            }
+
+            @include tablet {
+                width: 100%;
+            }
+        }
+
+        p {
+            @include tablet {
+                background-color: $gris;
+                height: 35rem;
+                overflow: auto;
+            }
+        }
+    }
+}

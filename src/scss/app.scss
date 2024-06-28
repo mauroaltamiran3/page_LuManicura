@@ -1,0 +1,22 @@
+/** UTILIDADES **/
+
+@import './base/normalize';
+@import './base/variables';
+@import './base/mixins';
+@import './base/globales';
+@import './base/utilidades';
+
+
+/** UI PAGES **/
+@import './layout/nosotros';
+@import './layout/proyectos';
+@import './layout/contacto';
+@import './layout/tecnicas';
+@import './layout/disenos';
+@import './layout/materiales';
+
+/** GLOBALES **/
+@import './globales/header';
+@import './globales/navegacion';
+@import './globales/footer';
+@import './globales/arrow';
