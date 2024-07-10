@@ -22,7 +22,7 @@
 
     /** PAGES HEADER **/
     &.pages {
-        padding: $separacion / 4;
+        padding: calc($separacion / 4);
 
         .barra {
             padding: 0;
