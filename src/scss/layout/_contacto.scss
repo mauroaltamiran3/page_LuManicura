@@ -1,12 +1,13 @@
 .contacto {
-    height: calc(100vh - ($height-pages-nav * 2));
+    height: 100%;
 
     .redes {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        gap: $separacion;
+        gap: calc($separacion / 2);
+        height: 100%;
 
             h2 {
                 margin: 0;
